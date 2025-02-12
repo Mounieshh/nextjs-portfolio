@@ -10,7 +10,7 @@ import NavLink from "./navlink";
 const links = [
   { url: "/", title: "Home" },
   { url: "/about", title: "About" },
-  { url: "/portfolio", title: "Por tfolio" },
+  { url: "/portfolio", title: "Portfolio" },
   { url: "/contact", title: "Contact" },
 ];
 
