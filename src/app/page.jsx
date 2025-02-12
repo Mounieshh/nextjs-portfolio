@@ -1,11 +1,17 @@
-import Image from "next/image";
+"use client"
 
+import Image from "next/image";
+import { motion } from "framer-motion";
 const Homepage = () => {
+
   return (
+    <motion.div className="h-full" initial={{y : "-200vh"}} animate={{y:"0vh"}} transition={{duration:1}}>
     <div className="h-full flex lg:flex-row flex-col px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-lg">
       {/* IMAGE CONTAINER */}
       <div className="h-1/2 lg:h-full lg:w-1/2 relative">
-        <Image src="/hero.png" alt="" fill className="object-contain"/>
+        <Image src="/hero.png" alt="" fill sizes="(max-width: 768px) 100vw, 
+         (max-width: 1200px) 50vw, 
+         33vw" className="object-contain"/>
       </div>
 
       {/* TEXT CONTAINER */}
@@ -34,6 +40,7 @@ const Homepage = () => {
         </div>
       </div>
     </div>
+    </motion.div>
   );
 };
 
