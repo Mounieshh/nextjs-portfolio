@@ -113,10 +113,10 @@ const AboutPage = () => {
             </div>
 
             {/* EXPERIENCE SECTION */}
-            <div className='flex flex-col gap-8 md:gap-12 pb-32 md:pb-48'>
-  <h1 className='font-bold text-2xl sm:text-3xl lg:text-4xl'>
-    EXPERIENCE
-  </h1>
+      <div className='flex flex-col gap-8 md:gap-12 pb-32 md:pb-48'>
+          <h1 className='font-bold text-2xl sm:text-3xl lg:text-4xl'>
+            EXPERIENCE
+          </h1>
 
   {/* list */}
   <div className=''>
