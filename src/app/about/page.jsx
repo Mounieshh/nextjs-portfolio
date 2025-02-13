@@ -22,7 +22,7 @@ const AboutPage = () => {
                 WHO AM I
               </h1>
               <p className='text-base sm:text-lg md:text-base'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, quis. Placeat nihil incidunt deleniti, veniam maxime necessitatibus iure optio sit ad nemo, cupiditate eligendi delectus eius. Dicta nemo ea corrupti quod atque laudantium esse eligendi fugit laboriosam. Reiciendis, fugit expedita.
+                I am a passionate web developer with 6 months of Experience since i started my development as a 2nd year student and coded over 10000 lines and gained knowledge as intern in 2 companies.I done a project with my friend which has a better scope in the future
               </p>
 
               <span className='italic text-sm sm:text-base'>
