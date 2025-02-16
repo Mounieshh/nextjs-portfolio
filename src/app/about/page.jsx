@@ -1,12 +1,15 @@
 "use client"
 
 import Brain from '@/components/brain'
-import { motion, useScroll } from 'framer-motion'
+import { motion, useInView, useScroll } from 'framer-motion'
 import { useRef } from 'react'
 
 const AboutPage = () => {
   const containerRef = useRef()
   const { scrollYProgress } = useScroll({ container: containerRef })
+
+  const skillRef = useRef();
+  const skillInView = useInView(skillRef, {margin : "-100px"});
 
   return (
     <>
@@ -69,12 +72,12 @@ const AboutPage = () => {
             </div>
 
             {/* SKILLS SECTION */}
-            <div className='flex flex-col gap-8 md:gap-12'>
-              <h1 className='font-bold text-2xl sm:text-3xl'>
+            <div className='flex flex-col gap-8 md:gap-12' ref={skillRef}>
+              <motion.h1 className='font-bold text-2xl sm:text-3xl'initial={{x : "-300px"}} animate={skillInView ? {x : "0"} : {}}>
                 SKILLS
-              </h1>
+              </motion.h1>
               {/* SKILLS LIST */}
-              <div className='flex gap-2 sm:gap-4 flex-wrap md:gap-4'>
+              <motion.div className='flex gap-2 sm:gap-4 flex-wrap md:gap-4' initial={{x : "-300px"}} animate={skillInView ? {x : "0"} : {}}>
                 <div className="rounded p-2 text-xs sm:text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">HTML5</div>
                 <div className="rounded p-2 text-xs sm:text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">JavaScript</div>
                 <div className="rounded p-2 text-xs sm:text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">Next.js</div>
@@ -86,7 +89,7 @@ const AboutPage = () => {
                 <div className="rounded p-2 text-xs sm:text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">CSS3</div>
                 <div className="rounded p-2 text-xs sm:text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">Tailwind CSS</div>
                 <div className="rounded p-2 text-xs sm:text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">Framer Motion</div>
-              </div>
+              </motion.div>
 
               <motion.svg
                 initial={{ opacity: 0.2, y: 0 }}
